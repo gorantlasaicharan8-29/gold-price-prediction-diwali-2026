@@ -1,0 +1,320 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 2450" width="1400" height="2450" style="background-color: #f8fafc; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <!-- Gradients & Filters -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.06" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#475569" />
+    </marker>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#d97706" />
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0d9488" />
+    </marker>
+  </defs>
+
+  <!-- Title Banner -->
+  <rect x="50" y="40" width="1300" height="120" rx="12" fill="url(#headerGrad)" filter="url(#shadow)" />
+  <text x="90" y="90" fill="#ffffff" font-size="28" font-weight="800" letter-spacing="0.5">GOLD PRICE INTELLIGENCE — SYSTEM ARCHITECTURE</text>
+  <text x="90" y="125" fill="#94a3b8" font-size="16" font-weight="500">Production Econometric &amp; Machine Learning Pipeline for Diwali 2026 Forecast</text>
+
+  <!-- LAYER 1: DATA SOURCES LAYER -->
+  <g transform="translate(50, 190)">
+    <rect x="0" y="0" width="1300" height="200" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+    <rect x="0" y="0" width="1300" height="40" rx="10" fill="#f1f5f9" />
+    <rect x="0" y="30" width="1300" height="10" fill="#f1f5f9" />
+    <text x="20" y="26" fill="#0f172a" font-size="14" font-weight="700" letter-spacing="1">1. DATA SOURCES LAYER</text>
+    
+    <!-- Source 1 -->
+    <rect x="30" y="60" width="380" height="115" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    <text x="50" y="90" fill="#0f172a" font-size="16" font-weight="700">IBJA Gold 999 (Primary Target)</text>
+    <text x="50" y="115" fill="#64748b" font-size="13">Morning (AM) &amp; Evening (PM) quotes</text>
+    <text x="50" y="135" fill="#64748b" font-size="13">168 Observations (2025-09-02 to 2026-09-01)</text>
+    <text x="50" y="155" fill="#0d9488" font-size="12" font-weight="600">Unit: INR per 10g | 64.12% Weekday Coverage</text>
+
+    <!-- Source 2 -->
+    <rect x="460" y="60" width="380" height="115" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    <text x="480" y="90" fill="#0f172a" font-size="16" font-weight="700">International Gold Spot (GC=F)</text>
+    <text x="480" y="115" fill="#64748b" font-size="13">Yahoo Finance spot gold feed</text>
+    <text x="480" y="135" fill="#64748b" font-size="13">Daily OHLCV trading observations</text>
+    <text x="480" y="155" fill="#0d9488" font-size="12" font-weight="600">Unit: USD per Troy Ounce</text>
+
+    <!-- Source 3 -->
+    <rect x="890" y="60" width="380" height="115" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    <text x="910" y="90" fill="#0f172a" font-size="16" font-weight="700">USD/INR Exchange Rate (USDINR=X)</text>
+    <text x="910" y="115" fill="#64748b" font-size="13">Yahoo Finance spot exchange rate</text>
+    <text x="910" y="135" fill="#64748b" font-size="13">Daily OHLC spot currency observations</text>
+    <text x="910" y="155" fill="#0d9488" font-size="12" font-weight="600">Unit: INR per 1.0 USD</text>
+  </g>
+
+  <!-- Arrow 1 to 2 -->
+  <line x1="700" y1="390" x2="700" y2="425" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)" />
+
+  <!-- LAYER 2: DATA PROCESSING & ALIGNMENT LAYER -->
+  <g transform="translate(50, 430)">
+    <rect x="0" y="0" width="1300" height="150" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+    <rect x="0" y="0" width="1300" height="40" rx="10" fill="#f1f5f9" />
+    <rect x="0" y="30" width="1300" height="10" fill="#f1f5f9" />
+    <text x="20" y="26" fill="#0f172a" font-size="14" font-weight="700" letter-spacing="1">2. DATA PROCESSING &amp; ALIGNMENT LAYER</text>
+
+    <rect x="30" y="55" width="380" height="75" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    <text x="50" y="80" fill="#0f172a" font-size="14" font-weight="700">Data Extraction &amp; Cleaning</text>
+    <text x="50" y="102" fill="#64748b" font-size="12">Parse IBJA PDFs, validate AM/PM quotes</text>
+
+    <rect x="460" y="55" width="380" height="75" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    <text x="480" y="80" fill="#0f172a" font-size="14" font-weight="700">Target Variable Assembly</text>
+    <text x="480" y="102" fill="#64748b" font-size="12">target_gold_999 = (AM + PM) / 2</text>
+
+    <rect x="890" y="55" width="380" height="75" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    <text x="910" y="80" fill="#0f172a" font-size="14" font-weight="700">Market Feed Alignment</text>
+    <text x="910" y="102" fill="#64748b" font-size="12">Join feeds on date key (gold_master_dataset.csv)</text>
+  </g>
+
+  <!-- Arrow 2 to 3 -->
+  <line x1="700" y1="580" x2="700" y2="615" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)" />
+
+  <!-- LAYER 3: FEATURE ENGINEERING LAYER -->
+  <g transform="translate(50, 620)">
+    <rect x="0" y="0" width="1300" height="230" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+    <rect x="0" y="0" width="1300" height="40" rx="10" fill="#f1f5f9" />
+    <rect x="0" y="30" width="1300" height="10" fill="#f1f5f9" />
+    <text x="20" y="26" fill="#0f172a" font-size="14" font-weight="700" letter-spacing="1">3. FEATURE ENGINEERING LAYER (46 PREDICTOR FEATURES)</text>
+
+    <!-- Box 1: Lags & Trend -->
+    <rect x="30" y="55" width="280" height="150" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    <text x="45" y="80" fill="#0f172a" font-size="14" font-weight="700">Target Lags &amp; Averages</text>
+    <text x="45" y="105" fill="#64748b" font-size="12">• Lags: t-1, t-2, t-3, t-5, t-7, t-14</text>
+    <text x="45" y="125" fill="#64748b" font-size="12">• Moving Avg: 3, 7, 14, 30 days</text>
+    <text x="45" y="145" fill="#64748b" font-size="12">• Volatility: 7, 14, 30 days</text>
+    <text x="45" y="165" fill="#64748b" font-size="12">• Returns: 1d, 3d, 7d % change</text>
+
+    <!-- Box 2: International Gold -->
+    <rect x="340" y="55" width="280" height="150" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    <text x="355" y="80" fill="#0f172a" font-size="14" font-weight="700">International Gold Signals</text>
+    <text x="355" y="105" fill="#64748b" font-size="12">• OHLCV Spot Gold (USD/oz)</text>
+    <text x="355" y="125" fill="#64748b" font-size="12">• Returns: 1d, 3d, 7d % change</text>
+    <text x="355" y="145" fill="#64748b" font-size="12">• Volatility: 7, 14 days</text>
+    <text x="355" y="165" fill="#64748b" font-size="12">• Volume indicators</text>
+
+    <!-- Box 3: USD/INR Exchange -->
+    <rect x="650" y="55" width="280" height="150" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    <text x="665" y="80" fill="#0f172a" font-size="14" font-weight="700">USD/INR Currency Signals</text>
+    <text x="665" y="105" fill="#64748b" font-size="12">• Spot Exchange Rate OHLC</text>
+    <text x="665" y="125" fill="#64748b" font-size="12">• Currency Returns: 1d, 3d, 7d</text>
+    <text x="665" y="145" fill="#64748b" font-size="12">• Volatility: 7, 14 days</text>
+    <text x="665" y="165" fill="#0f766e" font-size="12" font-weight="600">• Proxy: Spot Gold × USD/INR</text>
+
+    <!-- Box 4: Calendar & Diwali -->
+    <rect x="960" y="55" width="310" height="150" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+    <text x="975" y="80" fill="#0f172a" font-size="14" font-weight="700">Calendar &amp; Festive Proximity</text>
+    <text x="975" y="105" fill="#64748b" font-size="12">• Day, Month, Quarter, Year</text>
+    <text x="975" y="125" fill="#64748b" font-size="12">• Month Start / End flags</text>
+    <text x="975" y="145" fill="#b45309" font-size="12" font-weight="600">• days_to_diwali metric</text>
+    <text x="975" y="165" fill="#b45309" font-size="12" font-weight="600">• is_near_diwali binary indicator</text>
+  </g>
+
+  <!-- Arrow 3 to 4 -->
+  <line x1="700" y1="850" x2="700" y2="885" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)" />
+
+  <!-- LAYER 4: CHRONOLOGICAL TIME-AWARE DATA SPLIT -->
+  <g transform="translate(50, 890)">
+    <rect x="0" y="0" width="1300" height="170" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+    <rect x="0" y="0" width="1300" height="40" rx="10" fill="#f1f5f9" />
+    <rect x="0" y="30" width="1300" height="10" fill="#f1f5f9" />
+    <text x="20" y="26" fill="#0f172a" font-size="14" font-weight="700" letter-spacing="1">4. TIME-AWARE CHRONOLOGICAL SPLIT LAYER (NO RANDOM SHUFFLING)</text>
+
+    <!-- Train -->
+    <rect x="30" y="55" width="380" height="95" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5" />
+    <text x="50" y="80" fill="#1e40af" font-size="16" font-weight="700">Training Set (70%)</text>
+    <text x="50" y="103" fill="#1e3a8a" font-size="13">117 Observations</text>
+    <text x="50" y="123" fill="#1e3a8a" font-size="12">2025-09-02 to 2026-06-19 (Preprocessor Fitted Here)</text>
+
+    <!-- Validation -->
+    <rect x="460" y="55" width="380" height="95" rx="6" fill="#fefce8" stroke="#fef08a" stroke-width="1.5" />
+    <text x="480" y="80" fill="#854d0e" font-size="16" font-weight="700">Validation Set (15%)</text>
+    <text x="480" y="103" fill="#713f12" font-size="13">25 Observations</text>
+    <text x="480" y="123" fill="#713f12" font-size="12">2026-06-22 to 2026-07-27 (Model Selection Split)</text>
+
+    <!-- Test -->
+    <rect x="890" y="55" width="380" height="95" rx="6" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5" />
+    <text x="910" y="80" fill="#166534" font-size="16" font-weight="700">Holdout Test Set (15%)</text>
+    <text x="910" y="103" fill="#14532d" font-size="13">26 Observations</text>
+    <text x="910" y="123" fill="#14532d" font-size="12">2026-07-28 to 2026-09-01 (Untouched Benchmark)</text>
+  </g>
+
+  <!-- Arrow 4 to 5 -->
+  <line x1="700" y1="1060" x2="700" y2="1095" stroke="#475569" stroke-width="2.5" marker-end="url(#arrow)" />
+
+  <!-- LAYER 5: MODEL EVALUATION & SELECTION LAYER -->
+  <g transform="translate(50, 1100)">
+    <rect x="0" y="0" width="1300" height="240" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+    <rect x="0" y="0" width="1300" height="40" rx="10" fill="#f1f5f9" />
+    <rect x="0" y="30" width="1300" height="10" fill="#f1f5f9" />
+    <text x="20" y="26" fill="#0f172a" font-size="14" font-weight="700" letter-spacing="1">5. MODEL TRAINING, EVALUATION &amp; SELECTION LAYER</text>
+
+    <g transform="translate(30, 55)">
+      <!-- Linear Regression (SELECTED) -->
+      <rect x="0" y="0" width="280" height="160" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" />
+      <rect x="180" y="10" width="90" height="22" rx="4" fill="#16a34a" />
+      <text x="225" y="25" fill="#ffffff" font-size="10" font-weight="800" text-anchor="middle">SELECTED</text>
+      <text x="15" y="30" fill="#0f172a" font-size="15" font-weight="700">Linear Regression</text>
+      <text x="15" y="55" fill="#166534" font-size="12">Val MAE: ₹2,495.98</text>
+      <text x="15" y="75" fill="#166534" font-size="12">Val RMSE: ₹2,738.80</text>
+      <text x="15" y="95" fill="#166534" font-size="12">Val MAPE: 1.7459%</text>
+      <text x="15" y="115" fill="#166534" font-size="12">Val R²: -1.3225</text>
+      <text x="15" y="140" fill="#0f766e" font-size="11" font-weight="600">Test MAPE: 1.4178% | R²: 0.8409</text>
+
+      <!-- XGBoost -->
+      <rect x="310" y="0" width="280" height="160" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+      <text x="325" y="30" fill="#0f172a" font-size="15" font-weight="700">XGBoost Regressor</text>
+      <text x="325" y="60" fill="#64748b" font-size="12">Val MAE: ₹6,524.20</text>
+      <text x="325" y="85" fill="#64748b" font-size="12">Val RMSE: ₹6,832.94</text>
+      <text x="325" y="110" fill="#64748b" font-size="12">Val MAPE: 4.5660%</text>
+      <text x="325" y="135" fill="#64748b" font-size="12">Val R²: -13.4562</text>
+
+      <!-- Gradient Boosting -->
+      <rect x="620" y="0" width="280" height="160" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+      <text x="635" y="30" fill="#0f172a" font-size="15" font-weight="700">Gradient Boosting</text>
+      <text x="635" y="60" fill="#64748b" font-size="12">Val MAE: ₹9,385.52</text>
+      <text x="635" y="85" fill="#64748b" font-size="12">Val RMSE: ₹9,657.06</text>
+      <text x="635" y="110" fill="#64748b" font-size="12">Val MAPE: 6.5643%</text>
+      <text x="635" y="135" fill="#64748b" font-size="12">Val R²: -27.8754</text>
+
+      <!-- Random Forest -->
+      <rect x="930" y="0" width="310" height="160" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+      <text x="945" y="30" fill="#0f172a" font-size="15" font-weight="700">Random Forest</text>
+      <text x="945" y="60" fill="#64748b" font-size="12">Val MAE: ₹9,847.32</text>
+      <text x="945" y="85" fill="#64748b" font-size="12">Val RMSE: ₹10,091.01</text>
+      <text x="945" y="110" fill="#64748b" font-size="12">Val MAPE: 6.8922%</text>
+      <text x="945" y="135" fill="#64748b" font-size="12">Val R²: -30.5288</text>
+    </g>
+  </g>
+
+  <!-- Arrow 5 to 6 -->
+  <line x1="700" y1="1340" x2="700" y2="1375" stroke="#d97706" stroke-width="2.5" marker-end="url(#arrowGold)" />
+
+  <!-- LAYER 6: FROZEN DIWALI 2026 FORECAST ENGINE -->
+  <g transform="translate(50, 1380)">
+    <rect x="0" y="0" width="1300" height="200" rx="10" fill="#fffbeb" stroke="#fde68a" stroke-width="2" filter="url(#shadow)" />
+    <rect x="0" y="0" width="1300" height="40" rx="10" fill="#fef3c7" />
+    <rect x="0" y="30" width="1300" height="10" fill="#fef3c7" />
+    <text x="20" y="26" fill="#92400e" font-size="14" font-weight="700" letter-spacing="1">6. FROZEN DIWALI 2026 FORECAST &amp; RECURSIVE ENGINE LAYER</text>
+
+    <g transform="translate(30, 55)">
+      <!-- Box 1: Reference Forecast -->
+      <rect x="0" y="0" width="380" height="120" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5" />
+      <text x="20" y="30" fill="#b45309" font-size="13" font-weight="700">DIWALI 2026 REFERENCE ESTIMATE</text>
+      <text x="20" y="65" fill="#d97706" font-size="28" font-weight="800">₹142,442.41</text>
+      <text x="20" y="95" fill="#78350f" font-size="12">Date: 2026-11-08 (Sunday) | Target: Gold 999 / 10g</text>
+
+      <!-- Box 2: Range -->
+      <rect x="420" y="0" width="410" height="120" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5" />
+      <text x="440" y="30" fill="#b45309" font-size="13" font-weight="700">ESTIMATED CONFIDENCE BOUNDS (5th – 95th %ile)</text>
+      <text x="440" y="65" fill="#0f172a" font-size="22" font-weight="800">₹137,889.90 – ₹144,859.72</text>
+      <text x="440" y="95" fill="#78350f" font-size="12">Span: ₹6,969.82 | Method: Multi-step Recursive Projection</text>
+
+      <!-- Box 3: Surrounding Days -->
+      <rect x="860" y="0" width="380" height="120" rx="8" fill="#ffffff" stroke="#fcd34d" stroke-width="1.5" />
+      <text x="880" y="30" fill="#b45309" font-size="13" font-weight="700">SURROUNDING BUSINESS-DAY FORECASTS</text>
+      <text x="880" y="60" fill="#0f172a" font-size="13">• Prev Business Day (2026-11-06): ₹142,180.23</text>
+      <text x="880" y="85" fill="#0f172a" font-size="13">• Next Business Day (2026-11-09): ₹142,704.58</text>
+      <text x="880" y="105" fill="#166534" font-size="11" font-weight="600">Artifact Status: FROZEN &amp; PASSED LEAKAGE AUDIT</text>
+    </g>
+  </g>
+
+  <!-- Arrow 6 to 7 -->
+  <line x1="700" y1="1580" x2="700" y2="1615" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arrowTeal)" />
+
+  <!-- LAYER 7: FASTAPI BACKEND REST API LAYER -->
+  <g transform="translate(50, 1620)">
+    <rect x="0" y="0" width="1300" height="300" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+    <rect x="0" y="0" width="1300" height="40" rx="10" fill="#f1f5f9" />
+    <rect x="0" y="30" width="1300" height="10" fill="#f1f5f9" />
+    <text x="20" y="26" fill="#0f172a" font-size="14" font-weight="700" letter-spacing="1">7. FASTAPI BACKEND REST API LAYER (PYTHON / UVICORN)</text>
+
+    <g transform="translate(30, 55)">
+      <!-- System & Health Endpoints -->
+      <rect x="0" y="0" width="380" height="100" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+      <text x="15" y="25" fill="#0f766e" font-size="13" font-weight="700">SYSTEM &amp; READINESS ENDPOINTS</text>
+      <text x="15" y="48" fill="#0f172a" font-size="12" font-family="monospace">• GET / health (Liveness Check)</text>
+      <text x="15" y="68" fill="#0f172a" font-size="12" font-family="monospace">• GET / ready (Artifact Availability)</text>
+      <text x="15" y="88" fill="#0f172a" font-size="12" font-family="monospace">• GET / (Redirects to /docs)</text>
+
+      <!-- Forecast Endpoints -->
+      <rect x="410" y="0" width="420" height="100" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+      <text x="425" y="25" fill="#0f766e" font-size="13" font-weight="700">FORECAST &amp; WEIGHT ENDPOINTS</text>
+      <text x="425" y="48" fill="#0f172a" font-size="12" font-family="monospace">• GET /api/diwali-prediction</text>
+      <text x="425" y="68" fill="#0f172a" font-size="12" font-family="monospace">• GET /api/forecast (49 Business Days)</text>
+      <text x="425" y="88" fill="#0f766e" font-size="12" font-weight="600" font-family="monospace">• GET /api/weight-prediction?weight=N (1g-15g)</text>
+
+      <!-- Model & Data Endpoints -->
+      <rect x="860" y="0" width="380" height="100" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+      <text x="875" y="25" fill="#0f766e" font-size="13" font-weight="700">MODEL &amp; HISTORICAL ENDPOINTS</text>
+      <text x="875" y="48" fill="#0f172a" font-size="12" font-family="monospace">• GET /api/model-info</text>
+      <text x="875" y="68" fill="#0f172a" font-size="12" font-family="monospace">• GET /api/model-comparison</text>
+      <text x="875" y="88" fill="#0f172a" font-size="12" font-family="monospace">• GET /api/historical-data (168 Obs)</text>
+
+      <!-- Analytics & Scenario Endpoints -->
+      <rect x="0" y="115" width="1240" height="115" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+      <text x="15" y="140" fill="#0f766e" font-size="13" font-weight="700">EXPLAINABILITY &amp; SCENARIO ENDPOINTS</text>
+      <text x="15" y="165" fill="#0f172a" font-size="12" font-family="monospace">• GET /api/prediction-drivers (Linear Regression feature contribution decomposition: y = β0 + Σ βi xi)</text>
+      <text x="15" y="185" fill="#0f172a" font-size="12" font-family="monospace">• GET /api/what-if (Sensitivity analysis scenarios: Gold ±5%, USD/INR ±2%)</text>
+      <text x="15" y="208" fill="#64748b" font-size="12">Middleware: CORS (origins configured via .env) | Exception Handlers: HTTP 400/422 &amp; 500 | Validation: Pydantic</text>
+    </g>
+  </g>
+
+  <!-- Arrow 7 to 8 -->
+  <line x1="700" y1="1920" x2="700" y2="1955" stroke="#0d9488" stroke-width="2.5" marker-end="url(#arrowTeal)" />
+
+  <!-- LAYER 8: REACT / VITE FRONTEND USER INTERFACE LAYER -->
+  <g transform="translate(50, 1960)">
+    <rect x="0" y="0" width="1300" height="420" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)" />
+    <rect x="0" y="0" width="1300" height="40" rx="10" fill="#f1f5f9" />
+    <rect x="0" y="30" width="1300" height="10" fill="#f1f5f9" />
+    <text x="20" y="26" fill="#0f172a" font-size="14" font-weight="700" letter-spacing="1">8. REACT / VITE FRONTEND ANALYTICS DASHBOARD LAYER</text>
+
+    <g transform="translate(30, 55)">
+      <!-- View 1: Dashboard -->
+      <rect x="0" y="0" width="380" height="160" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+      <text x="20" y="30" fill="#0f172a" font-size="15" font-weight="700">Market Intelligence Dashboard</text>
+      <text x="20" y="55" fill="#64748b" font-size="12">• MarketContextTicker component</text>
+      <text x="20" y="75" fill="#64748b" font-size="12">• Latest Observed IBJA Target Snapshot</text>
+      <text x="20" y="95" fill="#64748b" font-size="12">• Diwali 2026 Forecast Spotlight Card</text>
+      <text x="20" y="115" fill="#64748b" font-size="12">• DataIntegrityBadge verification panel</text>
+      <text x="20" y="135" fill="#0f766e" font-size="12" font-weight="600">Route: / (Dashboard)</text>
+
+      <!-- View 2: Forecast Desk -->
+      <rect x="410" y="0" width="420" height="160" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+      <text x="430" y="30" fill="#0f172a" font-size="15" font-weight="700">Forecast Desk &amp; Calculator</text>
+      <text x="430" y="55" fill="#64748b" font-size="12">• CombinedChart (Historical + 49-day Forecast)</text>
+      <text x="430" y="75" fill="#d97706" font-size="12" font-weight="700">• GoldWeightCalculator (1g to 15g scaling)</text>
+      <text x="430" y="95" fill="#64748b" font-size="12">• PredictionDrivers &amp; WhatIfAnalysis modules</text>
+      <text x="430" y="115" fill="#64748b" font-size="12">• RangeBar estimated confidence bounds</text>
+      <text x="430" y="135" fill="#0f766e" font-size="12" font-weight="600">Route: /forecast (Forecast Desk)</text>
+
+      <!-- View 3: Model Lab -->
+      <rect x="860" y="0" width="380" height="160" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+      <text x="880" y="30" fill="#0f172a" font-size="15" font-weight="700">Model Lab &amp; Evaluation</text>
+      <text x="880" y="55" fill="#64748b" font-size="12">• ModelComparison component</text>
+      <text x="880" y="75" fill="#64748b" font-size="12">• Comparative metrics table (MAE, RMSE, MAPE, R²)</text>
+      <text x="880" y="95" fill="#64748b" font-size="12">• Train / Validation / Test dataset metrics</text>
+      <text x="880" y="115" fill="#64748b" font-size="12">• Selected Linear Regression highlight</text>
+      <text x="880" y="135" fill="#0f766e" font-size="12" font-weight="600">Route: /model (Model Lab)</text>
+
+      <!-- Bottom Panel: Design System & UX Features -->
+      <rect x="0" y="180" width="1240" height="160" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" />
+      <text x="20" y="210" fill="#0f172a" font-size="15" font-weight="700">Institutional UI Design Tokens &amp; Technical Capabilities</text>
+      <text x="20" y="235" fill="#64748b" font-size="12">• Styling: Vanilla CSS Design Tokens (:root variables), DM Mono &amp; Inter typography (Zero Tailwind dependency)</text>
+      <text x="20" y="255" fill="#64748b" font-size="12">• Interactive Controls: Gold Weight Slider (1g-15g, 0.1g step), quick select buttons (1g, 2g, 5g, 8g, 10g, 12g, 15g), live numeric input</text>
+      <text x="20" y="275" fill="#64748b" font-size="12">• Resilience &amp; UX: ErrorBoundary fallback wrappers, SkeletonLoader loading states, mobile/tablet responsive breakpoints</text>
+      <text x="20" y="295" fill="#64748b" font-size="12">• Accessibility: ARIA attributes (aria-valuenow, aria-valuemin, aria-valuemax), semantic HTML, high-contrast dark navy text</text>
+      <text x="20" y="320" fill="#166534" font-size="12" font-weight="600">• Production Hardcode Audit: PASSED (Zero hardcoded production prediction numbers in frontend JS source code)</text>
+    </g>
+  </g>
+</svg>
