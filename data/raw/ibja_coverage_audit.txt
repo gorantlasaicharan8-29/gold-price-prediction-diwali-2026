@@ -1,0 +1,147 @@
+IBJA GOLD COVERAGE AUDIT
+========================
+
+Audit date: 2026-09-03
+Requested period: 2025-09-02 through 2026-09-02
+Source restriction: official IBJA PDFs only
+
+SUMMARY
+-------
+Expected calendar days (inclusive): 366
+Expected weekday/business-date candidates: 262
+Expected approximate published observations: 262 weekday candidates before IBJA holidays
+Actual observations: 168
+Coverage percentage: 64.12% of weekday candidates
+Earliest date: 2025-09-02
+Latest date: 2026-09-01
+Missing date ranges: 94 weekday candidates, listed below
+Problem identified: Six supplied official IBJA PDFs returned HTTP 404 and cover the main gap from 2026-01-19 through 2026-05-07. The latest PDF also contains a literal numeric date label 02-08-26 with prices; it was correctly excluded as a Sunday rather than being reinterpreted as 2026-09-02. The extractor was fixed to recognize both DD-Mon-YY and DD-MM-YY formats.
+
+CURRENT CSV CHECK
+-----------------
+File: data/raw/ibja_gold_999_2025_2026.csv
+Total records: 168
+Earliest date: 2025-09-02
+Latest date: 2026-09-01
+Duplicate dates in CSV: 0
+Missing AM values: 0
+Missing PM values: 0
+Invalid numeric values: 0
+Dates outside requested range: 0
+Weekend/holiday rows included: 0
+Chronological order: PASS
+
+SOURCE PDF COVERAGE
+-------------------
+PDF filename | earliest in-range date | latest in-range date | Gold 999 observations
+Pdf_2911_20250930122006994_Daily Opening and Closing Market Rate.pdf | 2025-09-02 | 2025-09-30 | 21
+Pdf_3803_20251015121704887_Daily Opening and Closing Market Rate.pdf | 2025-09-15 | 2025-10-15 | 22
+Pdf_6929_20251104122454099_Daily Opening and Closing Market Rate.pdf | 2025-10-03 | 2025-11-04 | 22
+Pdf_8713_20251201170645510_Daily Opening and Closing Market Rate.pdf | 2025-10-28 | 2025-12-01 | 24
+Pdf_3599_20251230171500157_Daily Opening and Closing Market Rate.pdf | 2025-11-28 | 2025-12-30 | 22
+Pdf_2152_20260116170521867_Daily Opening and Closing Market Rate.pdf | 2025-12-15 | 2026-01-16 | 23
+Pdf_9815_20260609084851454_Daily Opening and Closing Market Rate.pdf | 2026-05-08 | 2026-06-09 | 22
+Pdf_7763_20260721134504817_Daily Opening and Closing Market Rate.pdf | 2026-06-19 | 2026-07-21 | 22
+Pdf_4936_20260804134744357_Daily Opening and Closing Market Rate.pdf | 2026-07-02 | 2026-08-04 | 24
+Pdf_9924_20260831085413646_Daily Opening and Closing Market Rate.pdf | 2026-07-30 | 2026-08-31 | 23
+Pdf_5171_20260902142334051_Daily Opening and Closing Market Rate.pdf | 2026-08-03 | 2026-09-01 | 22
+
+The 11 downloaded PDFs produced 247 in-range raw observations. Their union contains 168 unique dates. The current CSV contains the same 168-date union, so no extracted unique date was dropped during CSV generation.
+
+FAILED OR UNAVAILABLE OFFICIAL REPORTS
+--------------------------------------
+The following six supplied URLs returned HTTP 404 and no local PDF was created:
+
+- Pdf_4041_20260203122230154_Daily Opening and Closing Market Rate.pdf
+  Report date: 2026-02-03; nominal report window: 2026-01-05 through 2026-02-03
+- Pdf_8759_20260227124908893_Daily Opening and Closing Market Rate.pdf
+  Report date: 2026-02-27; nominal report window: 2026-01-29 through 2026-02-27
+- Pdf_4722_20260302124004909_Daily Opening and Closing Market Rate.pdf
+  Report date: 2026-03-02; nominal report window: 2026-02-01 through 2026-03-02
+- Pdf_7566_20260402135929203_Daily Opening and Closing Market Rate.pdf
+  Report date: 2026-04-02; nominal report window: 2026-03-04 through 2026-04-02
+- Pdf_1226_20260430133606283_Daily Opening and Closing Market Rate.pdf
+  Report date: 2026-04-30; nominal report window: 2026-04-01 through 2026-04-30
+- Pdf_2969_20260505134358004_Daily Opening and Closing Market Rate.pdf
+  Report date: 2026-05-05; nominal report window: 2026-04-06 through 2026-05-05
+
+No downloaded PDF was empty. All 11 downloaded PDFs parsed successfully with pypdf.
+
+MISSING WEEKDAY/BUSINESS-DATE CANDIDATES
+----------------------------------------
+These are weekday candidates absent from the union of downloaded official PDF observations. Weekends are not included. IBJA holidays remain unavailable and are not filled.
+
+2025-10-02
+2025-10-21
+2025-11-05
+2025-12-25
+2026-01-15
+2026-01-19 through 2026-01-23
+2026-01-26 through 2026-01-30
+2026-02-02 through 2026-02-06
+2026-02-09 through 2026-02-13
+2026-02-16 through 2026-02-20
+2026-02-23 through 2026-02-27
+2026-03-02 through 2026-03-06
+2026-03-09 through 2026-03-13
+2026-03-16 through 2026-03-20
+2026-03-23 through 2026-03-27
+2026-03-30 through 2026-04-03
+2026-04-06 through 2026-04-10
+2026-04-13 through 2026-04-17
+2026-04-20 through 2026-04-24
+2026-04-27 through 2026-05-01
+2026-05-04 through 2026-05-07
+2026-05-28
+2026-06-10 through 2026-06-12
+2026-06-15 through 2026-06-18
+2026-06-26
+2026-09-02
+
+Month-level diagnosis:
+- October 2025: isolated weekday gaps on 2025-10-02 and 2025-10-21.
+- November 2025: isolated gap on 2025-11-05.
+- December 2025: 2025-12-25 is an IBJA Market Holiday in an available PDF.
+- January 2026: 2026-01-15 is an IBJA Market Holiday; 2026-01-19 through 2026-01-30 are within/near the unavailable February report coverage.
+- February 2026: 2026-02-02 through 2026-02-27 are missing because the supplied February reports are unavailable.
+- March 2026: 2026-03-02 through 2026-03-27 are missing because the supplied February/March reports are unavailable.
+- April 2026: 2026-03-30 through 2026-05-01 are missing because the supplied April reports are unavailable.
+- May 2026: 2026-05-04 through 2026-05-07 are missing; the first available later PDF begins at 2026-05-08.
+- June 2026: isolated gaps on 2026-06-10 through 2026-06-18 and 2026-06-26 reflect the available report boundaries/coverage.
+- September 2026: 2026-09-02 is absent because the latest supplied PDF labels its priced row as 02-08-26. That literal date is Sunday and was excluded; it was not corrected or invented.
+
+DEDUPLICATION AUDIT
+-------------------
+Raw in-range observations across downloaded PDFs: 247
+Duplicate rows removed: 79
+Dates with duplicate source observations: 77
+Unique source dates after deduplication: 168
+Duplicate dates remaining in CSV: 0
+CSV dates missing from source union: 0
+Source-union dates missing from CSV: 0
+Conclusion: deduplication did not accidentally remove any valid unique date. Four dates had conflicting values across overlapping reports: 2025-09-30, 2025-10-15, 2025-11-04, and 2026-08-31. The first encountered official value was retained and the conflicts were recorded in data/raw/ibja_validation_report.json.
+
+EXTRACTION SCRIPT AUDIT
+-----------------------
+Script: src/data/extract_ibja_gold.py
+pypdf parsing: PASS for all 11 downloaded PDFs
+Recognized date formats: DD-Mon-YY and DD-MM-YY
+Gold 999 row extraction: PASS for all published rows represented in the downloaded PDFs
+Weekend/holiday handling: SAT, SUN, Market Holiday, and parsed weekend dates excluded
+Numeric validation: PASS; no non-positive or non-numeric Gold 999 values in the CSV
+Download failures: 6 official URLs returned HTTP 404
+Empty downloaded PDFs: 0
+
+RECOVERY STATUS
+---------------
+The missing observations cannot be recovered from the local downloaded PDFs because six official source PDFs are unavailable. No third-party data, interpolation, forward-fill, estimates, or fabricated rows were used. The dataset remains incomplete until valid official IBJA copies or replacement official reports for the failed windows are provided.
+
+CURRENT OFFICIAL WEBSITE CHECK
+------------------------------
+The official IBJA homepage (https://ibjarates.com/) was checked on 2026-09-03. It exposes the current "Previous 30 Days" report, which is the already downloaded Pdf_5171_20260902142334051 report. No public archive, pagination endpoint, or replacement URLs for the six failed historical reports were exposed by the current homepage. The homepage displays 02/09/2026 Gold 999 AM 151328 and PM 151184, but the supplied PDF prints that row as 02-08-26; the PDF text was not altered, so 2026-09-02 remains unavailable in the CSV.
+
+Files used/generated:
+- data/raw/ibja_gold_999_2025_2026.csv
+- data/raw/ibja_data_metadata.json
+- data/raw/ibja_validation_report.json
+- src/data/extract_ibja_gold.py

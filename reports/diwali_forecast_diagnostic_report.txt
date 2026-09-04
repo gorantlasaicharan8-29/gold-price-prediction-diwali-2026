@@ -1,0 +1,49 @@
+DIWALI FORECAST DIAGNOSTIC REPORT
+=================================
+
+1. FORECAST CONTINUITY
+Latest actual IBJA price: 153,990.500000
+First recursive forecast: 141,292.292247
+Diwali reference estimate: 142,442.407153
+Forecast minimum: 138,995.178370
+Forecast maximum: 144,449.787980
+Forecast direction: ROUGHLY_FLAT
+Latest-to-first percentage change: -8.246098%
+Latest-to-Diwali percentage change: -7.499224%
+First-to-Diwali percentage change: 0.813997%
+
+2. FORECAST MOVEMENT
+Forecast start: 141,292.292247
+Forecast end: 142,704.581215
+Absolute change: 1,412.288968
+Percentage change: 0.999551%
+Maximum upward daily change: 1.454657%
+Maximum downward daily change: -1.945015%
+Largest absolute daily change: 1.945015%
+No forecast values were removed or modified.
+
+3. MARKET FORECAST BEHAVIOR
+International gold: start=4346.018898, end=4282.309511, min=4282.309511, max=4351.898801, change=-1.465925%, largest daily change=0.135294%
+USD/INR: start=95.307179, end=98.328023, min=95.307179, max=98.328023, change=3.169586%, largest daily change=0.176396%
+
+4. HISTORICAL RESIDUAL STATISTICS
+validation: mean=-2376.086284, std=1390.168095, absolute median=2586.379297, absolute 90th percentile=3916.761879
+test: mean=-459.849480, std=2585.398283, absolute median=2166.276555, absolute 90th percentile=4080.035233
+Current empirical residual-based range: 137,889.897741 to 144,859.721219
+The range is diagnostic only and was not changed.
+
+5. SENSITIVITY ANALYSIS
+Scenario values are controlled input perturbations, not alternative actual predictions.
+                       scenario  gold_market_adjustment  usdinr_adjustment  diwali_reference_estimate
+              baseline forecast                    0.00               0.00              142442.407153
+international gold forecast +5%                    0.05               0.00              141027.811717
+international gold forecast -5%                   -0.05               0.00              143778.677378
+           USD/INR forecast +2%                    0.00               0.02              144643.046263
+           USD/INR forecast -2%                    0.00              -0.02              140078.568995
+
+6. LIMITATIONS
+Future market inputs are model forecasts, not observations.
+Recursive target forecasts accumulate model and input uncertainty.
+Diwali 2026 is a Sunday; its value is a reference estimate between the adjacent business-day forecasts.
+Historical residuals are an empirical diagnostic, not statistical certainty.
+No future actual IBJA or market data was used.

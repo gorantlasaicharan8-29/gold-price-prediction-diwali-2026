@@ -1,0 +1,4 @@
+variable,lower_bound,upper_bound,number_of_potential_outliers
+target_gold_999,87362.4375,181847.9375,0
+gold_usd_close,3423.7252197265625,5007.1246337890625,0
+usdinr_close,78.66577339172363,105.4787769317627,0

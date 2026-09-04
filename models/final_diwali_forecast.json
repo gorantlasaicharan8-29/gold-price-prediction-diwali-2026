@@ -1,0 +1,20 @@
+{
+  "project": "Gold Price Prediction System during Diwali 2026",
+  "target": "IBJA Gold 999",
+  "unit": "INR per 10 grams",
+  "diwali_date": "2026-11-08",
+  "previous_business_day": "2026-11-06",
+  "next_business_day": "2026-11-09",
+  "selected_model": "Linear Regression",
+  "latest_observed_ibja_date": "2026-09-01",
+  "previous_business_day_forecast": 142180.23308982444,
+  "diwali_reference_estimate": 142442.40715252634,
+  "next_business_day_forecast": 142704.58121522825,
+  "lower_estimate": 137889.897741,
+  "upper_estimate": 144859.721219,
+  "forecast_method": "Recursive forecasting with forecasted international gold and USD/INR inputs",
+  "future_actual_ibja_used": false,
+  "future_actual_market_data_used": false,
+  "test_retraining": false,
+  "data_leakage_check": "PASSED"
+}

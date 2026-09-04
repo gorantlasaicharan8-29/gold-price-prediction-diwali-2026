@@ -1,0 +1,75 @@
+{
+  "earliest_date": "2025-09-02",
+  "latest_date": "2026-09-01",
+  "total_records": 168,
+  "duplicate_dates_after_deduplication": 0,
+  "duplicate_count_before_deduplication": 79,
+  "missing_am_values": 0,
+  "missing_pm_values": 0,
+  "invalid_numeric_values": [],
+  "conflicting_duplicate_values": [
+    {
+      "date": "2025-09-30",
+      "reason": "Conflicting values across official reports."
+    },
+    {
+      "date": "2025-10-15",
+      "reason": "Conflicting values across official reports."
+    },
+    {
+      "date": "2025-11-04",
+      "reason": "Conflicting values across official reports."
+    },
+    {
+      "date": "2026-08-31",
+      "reason": "Conflicting values across official reports."
+    }
+  ],
+  "chronological_order": true,
+  "dates_outside_requested_range": [],
+  "weekend_or_holiday_rows_accidentally_included": [],
+  "failed_reports": [
+    {
+      "file": "Pdf_4041_20260203122230154_Daily Opening and Closing Market Rate.pdf",
+      "url": "https://ibjarates.com/UploadedFiles/30DaysPdf/Pdf_4041_20260203122230154_Daily%20Opening%20and%20Closing%20Market%20Rate.pdf",
+      "report_date": "2026-02-03",
+      "affected_report_window": "2026-01-05 through 2026-02-03",
+      "reason": "PDF was not downloaded (official URL returned 404)."
+    },
+    {
+      "file": "Pdf_8759_20260227124908893_Daily Opening and Closing Market Rate.pdf",
+      "url": "https://ibjarates.com/UploadedFiles/30DaysPdf/Pdf_8759_20260227124908893_Daily%20Opening%20and%20Closing%20Market%20Rate.pdf",
+      "report_date": "2026-02-27",
+      "affected_report_window": "2026-01-29 through 2026-02-27",
+      "reason": "PDF was not downloaded (official URL returned 404)."
+    },
+    {
+      "file": "Pdf_4722_20260302124004909_Daily Opening and Closing Market Rate.pdf",
+      "url": "https://ibjarates.com/UploadedFiles/30DaysPdf/Pdf_4722_20260302124004909_Daily%20Opening%20and%20Closing%20Market%20Rate.pdf",
+      "report_date": "2026-03-02",
+      "affected_report_window": "2026-02-01 through 2026-03-02",
+      "reason": "PDF was not downloaded (official URL returned 404)."
+    },
+    {
+      "file": "Pdf_7566_20260402135929203_Daily Opening and Closing Market Rate.pdf",
+      "url": "https://ibjarates.com/UploadedFiles/30DaysPdf/Pdf_7566_20260402135929203_Daily%20Opening%20and%20Closing%20Market%20Rate.pdf",
+      "report_date": "2026-04-02",
+      "affected_report_window": "2026-03-04 through 2026-04-02",
+      "reason": "PDF was not downloaded (official URL returned 404)."
+    },
+    {
+      "file": "Pdf_1226_20260430133606283_Daily Opening and Closing Market Rate.pdf",
+      "url": "https://ibjarates.com/UploadedFiles/30DaysPdf/Pdf_1226_20260430133606283_Daily%20Opening%20and%20Closing%20Market%20Rate.pdf",
+      "report_date": "2026-04-30",
+      "affected_report_window": "2026-04-01 through 2026-04-30",
+      "reason": "PDF was not downloaded (official URL returned 404)."
+    },
+    {
+      "file": "Pdf_2969_20260505134358004_Daily Opening and Closing Market Rate.pdf",
+      "url": "https://ibjarates.com/UploadedFiles/30DaysPdf/Pdf_2969_20260505134358004_Daily%20Opening%20and%20Closing%20Market%20Rate.pdf",
+      "report_date": "2026-05-05",
+      "affected_report_window": "2026-04-06 through 2026-05-05",
+      "reason": "PDF was not downloaded (official URL returned 404)."
+    }
+  ]
+}

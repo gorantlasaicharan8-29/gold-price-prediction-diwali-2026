@@ -1,0 +1,56 @@
+TRAINING DATA SPLIT REPORT
+===========================
+
+1. DATASET INFORMATION
+Input: data\processed\gold_feature_dataset.csv
+Rows: 168
+Columns: 49
+
+2. TARGET DEFINITION
+Target: target_gold_999
+Target values were not imputed or transformed.
+
+3. EXCLUDED COLUMNS
+date (excluded when present)
+target_gold_999 (excluded when present)
+gold_999_am (excluded when present)
+gold_999_pm (excluded when present)
+gold_999_avg (excluded when present)
+source (excluded when present)
+
+4. TRAIN/VALIDATION/TEST SIZES
+Train rows: 117
+Validation rows: 25
+Test rows: 26
+Train date range: 2025-09-02 to 2026-06-19
+Validation date range: 2026-06-22 to 2026-07-27
+Test date range: 2026-07-28 to 2026-09-01
+
+5. FEATURE TYPES
+Numeric features (46): gold_usd_open, gold_usd_high, gold_usd_low, gold_usd_close, gold_usd_volume, usdinr_open, usdinr_high, usdinr_low, usdinr_close, day_of_week, day_of_month, month, quarter, day_of_year, week_of_year, is_month_start, is_month_end, days_to_diwali, is_near_diwali, gold_lag_1, gold_lag_2, gold_lag_3, gold_lag_5, gold_lag_7, gold_lag_14, gold_ma_3, gold_ma_7, gold_ma_14, gold_ma_30, gold_return_1d, gold_return_3d, gold_return_7d, gold_volatility_7, gold_volatility_14, gold_volatility_30, gold_usd_return_1d, usdinr_return_1d, gold_usd_return_3d, usdinr_return_3d, gold_usd_return_7d, usdinr_return_7d, gold_usd_volatility_7, usdinr_volatility_7, gold_usd_volatility_14, usdinr_volatility_14, gold_inr_proxy
+Boolean features (0): 
+Categorical features (0): None
+
+6. FEATURE COUNT
+Predictor features before preprocessing: 46
+Features after preprocessing: 46
+
+7. MISSING-VALUE HANDLING
+Training missing values before preprocessing: 363
+Validation missing values before preprocessing: 53
+Test missing values before preprocessing: 0
+Numeric missing values use a median imputer fitted on X_train only.
+Categorical missing values use most-frequent imputation if categorical features exist.
+No target values were imputed.
+
+8. PREPROCESSING STRATEGY
+Numeric: SimpleImputer(strategy='median'); no scaling applied.
+Categorical: SimpleImputer(strategy='most_frequent') and OneHotEncoder(handle_unknown='ignore') when present.
+Preprocessed X files contain the train-fitted transformed values for tree-model readiness.
+
+9. LEAKAGE PREVENTION CHECKS
+Random shuffling: not used.
+Preprocessor fit: TRAINING DATA ONLY.
+Chronological ordering: PASSED
+Excluded same-day IBJA target-source columns: PASSED.
+Future target values in preprocessing: not used.

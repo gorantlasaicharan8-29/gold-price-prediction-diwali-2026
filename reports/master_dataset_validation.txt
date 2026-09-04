@@ -1,0 +1,44 @@
+MASTER DATASET VALIDATION
+
+Rows: 168
+Earliest date: 2025-09-02
+Latest date: 2026-09-01
+Duplicate dates: 0
+
+IBJA TARGET
+Missing target values: 0
+Minimum target: 104543.0
+Maximum target: 162378.5
+
+INTERNATIONAL GOLD FEATURES
+Missing gold_usd_close: 5
+Missing gold_usd_open: 5
+Missing gold_usd_high: 5
+Missing gold_usd_low: 5
+
+USD/INR FEATURES
+Missing usdinr_close: 1
+Missing usdinr_open: 1
+Missing usdinr_high: 1
+Missing usdinr_low: 1
+
+Rows containing market data: 167 (99.40%)
+Original IBJA rows: 168
+Missing values were preserved; no fill or estimation was performed.
+
+Missing-value summary:
+date: 0
+gold_999_am: 0
+gold_999_pm: 0
+gold_999_average: 0
+source: 0
+gold_usd_open: 5
+gold_usd_high: 5
+gold_usd_low: 5
+gold_usd_close: 5
+gold_usd_volume: 5
+usdinr_open: 1
+usdinr_high: 1
+usdinr_low: 1
+usdinr_close: 1
+target_gold_999: 0

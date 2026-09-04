@@ -1,0 +1,69 @@
+EDA REPORT
+=========
+
+1. DATASET OVERVIEW
+Dataset shape: (168, 15)
+Number of rows: 168
+Number of columns: 14
+Duplicate dates: 0
+
+2. DATE COVERAGE
+Earliest date: 2025-09-02
+Latest date: 2026-09-01
+
+3. MISSING-VALUE SUMMARY
+date                0
+gold_999_am         0
+gold_999_pm         0
+gold_999_average    0
+source              0
+gold_usd_open       5
+gold_usd_high       5
+gold_usd_low        5
+gold_usd_close      5
+gold_usd_volume     5
+usdinr_open         1
+usdinr_high         1
+usdinr_low          1
+usdinr_close        1
+target_gold_999     0
+
+4. DESCRIPTIVE STATISTICS SUMMARY
+                 count           mean           std            min            25%            50%            75%            max
+gold_999_avg     168.0  135434.681548  15566.253000  104543.000000  122794.500000  136419.500000  146415.875000  162378.500000
+target_gold_999  168.0  135434.681548  15566.253000  104543.000000  122794.500000  136419.500000  146415.875000  162378.500000
+gold_usd_open    163.0    4178.352160    289.644548    3485.699951    4012.150024    4139.200195    4405.000000    4762.200195
+gold_usd_high    163.0    4209.717784    286.824382    3559.199951    4047.699951    4199.700195    4444.250000    4765.200195
+gold_usd_low     163.0    4152.019647    284.720887    3485.699951    3984.799927    4129.500000    4368.100098    4718.700195
+gold_usd_close   163.0    4182.873615    282.469395    3549.399902    4017.500000    4165.200195    4413.349854    4720.399902
+usdinr_open      167.0      91.909570      3.341322      87.740303      88.720650      90.232903      95.423901      96.876900
+usdinr_high      167.0      92.133332      3.377379      87.858299      88.801548      90.446800      95.687202      97.054100
+usdinr_low       167.0      91.570511      3.244831      85.862900      88.588802      89.848198      95.064201      96.459801
+usdinr_close     167.0      91.908884      3.340015      87.740303      88.720650      90.233002      95.423901      96.876900
+
+5. CORRELATION FINDINGS
+target_gold_999 vs gold_usd_close: 0.810615
+target_gold_999 vs usdinr_close: 0.888572
+target_gold_999 vs gold_usd_open: 0.819545
+target_gold_999 vs gold_usd_high: 0.820165
+target_gold_999 vs gold_usd_low: 0.810137
+Correlations are Pearson associations based on pairwise available observations and do not establish causation.
+
+6. DAILY MOVEMENT STATISTICS
+Mean daily gold percentage change: 0.241038%
+Standard deviation of daily gold percentage change: 1.339845%
+Minimum daily gold percentage change: -4.808952%
+Maximum daily gold percentage change: 6.673961%
+
+7. OUTLIER ANALYSIS
+       variable  lower_bound   upper_bound  number_of_potential_outliers
+target_gold_999 87362.437500 181847.937500                             0
+ gold_usd_close  3423.725220   5007.124634                             0
+   usdinr_close    78.665773    105.478777                             0
+
+8. IMPORTANT OBSERVATIONS
+The dataset contains IBJA target observations from the available source period; missing market values remain missing.
+International gold values are available for 163 of 168 rows.
+USD/INR values are available for 167 of 168 rows.
+Potential outliers are identified statistically and were not removed or modified.
+The descriptive statistics and correlations reflect available observations only.

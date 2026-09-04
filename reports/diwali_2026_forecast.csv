@@ -1,0 +1,4 @@
+date,forecast_gold_999,forecast_type
+2026-11-06,142180.23308982444,previous_business_day
+2026-11-08,142442.40715252634,diwali_reference_estimate
+2026-11-09,142704.58121522825,next_business_day

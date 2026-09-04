@@ -1,0 +1,39 @@
+STEP 39 FORECAST CONTINUITY AUDIT
+=================================
+
+Audit date: 2026-09-03
+Latest observed IBJA target date: 2026-09-01
+First recursive forecast date: 2026-09-02
+
+VALUES
+------
+Latest observed target: INR 153,990.500000
+First recursive forecast: INR 141,292.292247
+Absolute difference: INR -12,698.207753
+Percentage difference: -8.246098%
+
+ASSESSMENT
+----------
+The discontinuity is not caused by a changed target value, a modified dataset, or a preprocessing refit. The saved model and forecast values remain unchanged.
+
+The size and direction of the jump could be legitimate model behavior because the selected Linear Regression model is being applied recursively with forecasted external inputs, and its validation/test behavior does not guarantee continuity at the forecast boundary. However, code inspection also identified a feature-construction risk in the recursive engine that must be resolved before a future production refresh:
+
+- Target lag features use the latest prior target correctly.
+- In target_features(), target_history already contains observations only up to the forecast origin, but the helper creates historical = series.shift(1) before calculating moving averages, returns, and volatility. This excludes the latest observed target from those features and shifts the historical window one additional observation backward.
+- The original feature-engineering pipeline also uses a deliberate shift for rows within the observed sequence. The recursive engine must be explicitly reconciled with that row-alignment convention before any methodology change is approved.
+
+CLASSIFICATION
+--------------
+Primary classification: feature construction issue requiring investigation.
+Secondary contributing possibilities: ordinary Linear Regression extrapolation and recursive forecasting limitation.
+Not identified: raw data corruption, target fabrication, test-set retraining, preprocessing refit, or target-scale conversion error.
+
+QA DECISION
+----------
+Do not silently fix this during Step 39. Do not alter the frozen forecast. The discontinuity is reported for approval and investigation in a future controlled methodology step.
+
+RECOMMENDED INVESTIGATION
+-------------------------
+1. Write a unit test comparing the recursive engine's first forecast-row features with the feature-engineering convention at the 2026-09-02 boundary.
+2. Reconcile whether a recursive row's historical moving averages and returns should include the latest observed 2026-09-01 target.
+3. Re-run only after an explicit methodology decision, with before/after forecast values and validation documented.

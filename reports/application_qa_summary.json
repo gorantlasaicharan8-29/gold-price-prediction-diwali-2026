@@ -1,0 +1,13 @@
+{
+  "backend": "PASS",
+  "api": "PASS",
+  "frontend_build": "PASS",
+  "frontend_routes": "PASS",
+  "api_integration": "PASS",
+  "responsive": "PASS",
+  "cors": "PASS",
+  "frozen_forecast": "PASS",
+  "data_leakage": "PASS",
+  "model_retraining": false,
+  "forecast_regenerated": false
+}

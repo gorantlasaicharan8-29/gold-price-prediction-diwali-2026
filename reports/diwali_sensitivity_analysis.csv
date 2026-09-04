@@ -1,0 +1,6 @@
+scenario,gold_market_adjustment,usdinr_adjustment,diwali_reference_estimate
+baseline forecast,0.0,0.0,142442.4071525264
+international gold forecast +5%,0.05,0.0,141027.8117168634
+international gold forecast -5%,-0.05,0.0,143778.67737833934
+USD/INR forecast +2%,0.0,0.02,144643.04626327235
+USD/INR forecast -2%,0.0,-0.02,140078.56899522335

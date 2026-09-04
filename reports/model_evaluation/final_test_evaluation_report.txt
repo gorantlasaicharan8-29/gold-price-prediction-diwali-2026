@@ -1,0 +1,44 @@
+FINAL TEST EVALUATION REPORT
+============================
+
+1. SELECTED MODEL
+Linear Regression
+Selected because it had the lowest validation RMSE, followed by the required tie-break ordering of MAE, MAPE, and R2.
+
+2. VALIDATION METRICS
+model    Linear Regression
+MAE            2495.976313
+RMSE           2738.804606
+MAPE              1.745914
+R2               -1.322526
+
+3. FINAL TEST METRICS
+MAE: 2122.606075349774
+RMSE: 2576.5593280147195
+MAPE: 1.417787443460567
+R2: 0.8408842306856259
+
+4. TEST INFORMATION
+Test sample size: 26
+Test date range: 2026-07-28 to 2026-09-01
+
+5. ERROR ANALYSIS
+mean_absolute_error: 2122.606075349774
+maximum_absolute_error: 5307.341783695505
+minimum_absolute_error: 4.2255207158159465
+mean_percentage_error: 1.417787443460567
+maximum_percentage_error: 3.714219979142016
+largest_absolute_error_date: 2026-07-30
+smallest_absolute_error_date: 2026-09-01
+
+6. VALIDATION VS TEST PERFORMANCE
+   dataset             model         MAE        RMSE     MAPE        R2
+validation Linear Regression 2495.976313 2738.804606 1.745914 -1.322526
+      test Linear Regression 2122.606075 2576.559328 1.417787  0.840884
+Test performance is an estimate of performance on unseen historical data and is not a guarantee of accuracy on future dates.
+
+7. TEST PROTECTION AND LEAKAGE
+The test set was not used for model selection, tuning, or training before this final evaluation.
+The saved training-fitted preprocessor was reused without refitting on test data.
+No future data was used to generate the test predictions.
+Data leakage check: PASSED

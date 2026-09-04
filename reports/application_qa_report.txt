@@ -1,0 +1,85 @@
+PROJECT QA REPORT
+=================
+
+Date: 2026-09-03
+
+Project structure:
+PASS - Required directories and protected artifacts exist.
+
+Python environment:
+PASS - Project .venv used.
+Python version: 3.13.2
+Required backend packages: fastapi 0.141.1, uvicorn 0.52.4, pandas 3.0.5, pydantic 2.13.5.
+Existing ML package imports: PASS.
+
+Backend startup: PASS
+The FastAPI application started successfully on an isolated local port without traceback.
+
+Health endpoint: PASS
+GET /health returned HTTP 200 with status healthy and the expected service name.
+
+Model info endpoint: PASS
+GET /api/model-info returned HTTP 200 and matched models/model_metadata.json for model, split sizes, feature count, and metrics.
+
+Model comparison endpoint: PASS
+GET /api/model-comparison returned HTTP 200 with exactly four records, complete metrics, RMSE ranking, and Linear Regression selected. Source labels Random Forest and Gradient Boosting are normalized at the API boundary to the project contract names Random Forest Regressor and Gradient Boosting Regressor; stored CSV values were not changed.
+
+Diwali prediction endpoint: PASS
+GET /api/diwali-prediction returned HTTP 200 and matched the frozen JSON artifact, including the three business-date labels and reference estimate.
+
+Forecast endpoint: PASS
+GET /api/forecast returned HTTP 200 with 49 chronological business-day records from 2026-09-02 through 2026-11-09, no duplicates, no missing values, and no non-positive gold forecasts. Sunday 2026-11-08 is not included as a trading-day row.
+
+Historical endpoint: PASS
+GET /api/historical-data returned HTTP 200 with 168 chronological IBJA observations, required target fields, available market fields, no duplicate dates, and no missing IBJA target/AM/PM values.
+
+Frontend build: PASS
+npm install completed successfully and npm run build completed successfully. Vite emitted only a non-blocking bundle-size warning.
+
+Frontend routes: PASS
+/, /forecast, /model, and /about loaded successfully with four navigation links and no rendering errors.
+
+API integration: PASS
+React retrieved health, model info, model comparison, Diwali prediction, forecast, and historical data from the FastAPI service. Displayed forecast and metric values matched API responses; no production prediction values are hard-coded.
+
+Dashboard check: PASS
+Dashboard displayed Gold Price Intelligence, Diwali estimate, range, test MAPE, test R2, historical chart, forecast chart, market context, and the live model summary.
+
+Forecast page check: PASS
+Displayed adjacent business-day forecasts, reference estimate, range, methodology, and Sunday explanation without claiming an observed IBJA rate on 2026-11-08.
+
+Model page check: PASS
+Displayed selected model, four evaluated models, semantic comparison table, RMSE chart, validation/test metrics, split sizes, selection explanation, and negative validation R2.
+
+About page check: PASS
+Displayed project objective, IBJA target, international gold, USD/INR, evaluated models, selected model, recursive forecasting, and limitations.
+
+Loading states: PASS
+Loading UI appears before API data and prevents blank charts during normal loading.
+
+Error states: PASS
+API requests were blocked temporarily in-browser. The UI displayed "Unable to connect to the prediction service." and a Retry button. The live API was restored afterward.
+
+Responsive layout: PASS
+Checked at 1440px, 1280px, 768px, and 390px. No horizontal page overflow was detected; navigation, charts, forecast card, typography, and the horizontally scrollable comparison table remained usable.
+
+Console errors: PASS
+No uncaught JavaScript errors, React rendering errors, failed normal API requests, or missing asset errors were observed.
+
+CORS: PASS
+A request with Origin http://localhost:5173 received the expected Access-Control-Allow-Origin response from the backend.
+
+Number formatting: PASS
+Currency, percentage, R2, and readable date formatting were verified in the rendered UI.
+
+Frozen forecast integrity: PASS
+The frozen forecast artifact remained present and unchanged. The API and frontend read existing frozen values; no forecast was regenerated.
+
+Data leakage: PASS
+No model retraining, future actual IBJA data use, future actual market data use, or forecast regeneration occurred during QA.
+
+Model retraining: NO
+Forecast regenerated: NO
+Deployment: NOT PERFORMED
+
+QA STATUS: READY FOR DEPLOYMENT

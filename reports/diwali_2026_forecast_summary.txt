@@ -1,0 +1,22 @@
+DIWALI 2026 GOLD PRICE FORECAST
+
+Festival date: 2026-11-08
+Previous business day: 2026-11-06
+Next business day: 2026-11-09
+Selected model: Linear Regression
+Latest observed IBJA target: 2026-09-01
+Diwali reference estimate: INR 142,442.41
+Previous business-day forecast: INR 142,180.23
+Next business-day forecast: INR 142,704.58
+Estimated prediction range: INR 137,889.90 to INR 144,859.72
+International gold forecasting method: AutoReg(lags=5, trend='ct')
+USD/INR forecasting method: AutoReg(lags=5, trend='ct')
+
+Important limitations:
+- Future market inputs were forecast, not observed.
+- Future IBJA target values were never used.
+- Unavailable future OHLC/volume inputs were left missing and handled only by the existing train-fitted preprocessor.
+- The Diwali date is a Sunday.
+- The Diwali reference estimate is a modeling convention, not an observed IBJA rate.
+- The prediction range uses empirical 5th and 95th quantiles of historical validation/test residuals and is not statistical certainty.
+- Historical test performance does not guarantee future accuracy.

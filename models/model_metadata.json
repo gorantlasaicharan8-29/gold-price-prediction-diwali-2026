@@ -1,0 +1,15 @@
+{
+  "selected_model": "Linear Regression",
+  "validation_MAE": 2495.976312852865,
+  "validation_RMSE": 2738.804606241582,
+  "validation_MAPE": 1.7459135510484645,
+  "validation_R2": -1.3225263211018885,
+  "test_MAE": 2122.606075349774,
+  "test_RMSE": 2576.5593280147195,
+  "test_MAPE": 1.417787443460567,
+  "test_R2": 0.8408842306856259,
+  "training_rows": 117,
+  "validation_rows": 25,
+  "test_rows": 26,
+  "feature_count": 46
+}

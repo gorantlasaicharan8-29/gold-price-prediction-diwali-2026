@@ -1,0 +1,61 @@
+FINAL DIWALI 2026 GOLD PRICE REPORT
+
+1. PROJECT OBJECTIVE
+Package the validated recursive Gold 999 forecast for Diwali 2026 production use.
+
+2. DATA SOURCES USED
+IBJA Gold 999 historical target, Yahoo Finance-derived forecasted international gold and USD/INR inputs, saved train-fitted preprocessor, and the validated Linear Regression model.
+
+3. LATEST OBSERVED IBJA DATE
+2026-09-01
+
+4. SELECTED MODEL
+Linear Regression
+
+5. HISTORICAL VALIDATION PERFORMANCE
+model    Linear Regression
+MAE            2495.976313
+RMSE           2738.804606
+MAPE              1.745914
+R2               -1.322526
+
+6. FINAL UNSEEN TEST PERFORMANCE
+dataset                 test
+model      Linear Regression
+MAE              2122.606075
+RMSE             2576.559328
+MAPE                1.417787
+R2                  0.840884
+
+7. FORECASTING METHODOLOGY
+Validated recursive forecast using AutoReg market-input forecasts and the existing Linear Regression model; no retraining or parameter changes were performed.
+
+8. PREVIOUS BUSINESS-DAY FORECAST
+INR 142,180.23
+
+9. DIWALI REFERENCE ESTIMATE
+INR 142,442.41
+The Diwali reference estimate is a model-derived reference value because 8 November 2026 falls on a Sunday and is not a normal IBJA trading/rate-publication day.
+
+10. NEXT BUSINESS-DAY FORECAST
+INR 142,704.58
+
+11. ESTIMATED PREDICTION RANGE
+INR 137,889.90 to INR 144,859.72
+The prediction range is an estimated uncertainty range based on historical model residuals and should not be interpreted as a guaranteed interval.
+
+12. INTERNATIONAL GOLD FORECASTING METHOD
+AutoReg(lags=5, trend='ct')
+
+13. USD/INR FORECASTING METHOD
+AutoReg(lags=5, trend='ct')
+
+14. SENSITIVITY ANALYSIS SUMMARY
+Scenario values are controlled perturbations, not alternative predictions.
+baseline forecast: INR 142,442.41; international gold forecast +5%: INR 141,027.81; international gold forecast -5%: INR 143,778.68; USD/INR forecast +2%: INR 144,643.05; USD/INR forecast -2%: INR 140,078.57
+
+15. LIMITATIONS
+Future market inputs are forecasts rather than observations. Recursive error can accumulate. Historical test performance does not guarantee future accuracy.
+
+16. DATA LEAKAGE CHECKS
+Future actual IBJA data used: NO. Future actual market data used: NO. Test retraining: NO. Data leakage check: PASSED.

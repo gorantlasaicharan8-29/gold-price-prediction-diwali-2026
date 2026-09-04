@@ -1,0 +1,578 @@
+{
+  "model": "Linear Regression",
+  "forecast_date": "2026-11-08",
+  "prediction": 142442.40715252634,
+  "intercept": -139595.85707511287,
+  "total_positive_contribution": 492606.5498135889,
+  "total_negative_contribution": -210568.2855859497,
+  "top_positive_drivers": [
+    {
+      "feature": "usdinr_high",
+      "display_name": "USD/INR Day High Exchange Rate",
+      "raw_value": null,
+      "transformed_value": 89.51250076293945,
+      "coefficient": 1222.2741772522068,
+      "contribution": 109408.81822380934,
+      "absolute_contribution": 109408.81822380934,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "usdinr_close",
+      "display_name": "USD/INR Closing Exchange Rate",
+      "raw_value": 98.3080510029483,
+      "transformed_value": 98.3080510029483,
+      "coefficient": 970.8045968189517,
+      "contribution": 95437.90781797418,
+      "absolute_contribution": 95437.90781797418,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_usd_high",
+      "display_name": "International Gold Day High (USD/oz)",
+      "raw_value": null,
+      "transformed_value": 4215.7998046875,
+      "coefficient": 22.494176588930873,
+      "contribution": 94830.94527022091,
+      "absolute_contribution": 94830.94527022091,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "usdinr_open",
+      "display_name": "USD/INR Open Exchange Rate",
+      "raw_value": null,
+      "transformed_value": 89.15789794921875,
+      "coefficient": 882.9288780715091,
+      "contribution": 78720.08280751781,
+      "absolute_contribution": 78720.08280751781,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_usd_low",
+      "display_name": "International Gold Day Low (USD/oz)",
+      "raw_value": null,
+      "transformed_value": 4163.7001953125,
+      "coefficient": 7.910267701395624,
+      "contribution": 32935.98317327512,
+      "absolute_contribution": 32935.98317327512,
+      "direction": "POSITIVE"
+    }
+  ],
+  "top_negative_drivers": [
+    {
+      "feature": "usdinr_low",
+      "display_name": "USD/INR Day Low Exchange Rate",
+      "raw_value": null,
+      "transformed_value": 88.99114990234375,
+      "coefficient": -1063.0290214829174,
+      "contribution": -94600.1750013281,
+      "absolute_contribution": 94600.1750013281,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_usd_close",
+      "display_name": "International Gold Close (USD/oz)",
+      "raw_value": 4283.094600563472,
+      "transformed_value": 4283.094600563472,
+      "coefficient": -13.791387786958966,
+      "contribution": -59069.818564600966,
+      "absolute_contribution": 59069.818564600966,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_ma_3",
+      "display_name": "3-Day Moving Average Gold Price",
+      "raw_value": 141994.42795215163,
+      "transformed_value": 141994.42795215163,
+      "coefficient": -0.12545970915636476,
+      "contribution": -17814.579632701334,
+      "absolute_contribution": 17814.579632701334,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_ma_7",
+      "display_name": "7-Day Moving Average Gold Price",
+      "raw_value": 141767.76326508698,
+      "transformed_value": 141767.76326508698,
+      "coefficient": -0.11079370498516546,
+      "contribution": -15706.975739598824,
+      "absolute_contribution": 15706.975739598824,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_lag_14",
+      "display_name": "14-Day Lagged Gold Price (t-14)",
+      "raw_value": 140733.32598026676,
+      "transformed_value": 140733.32598026676,
+      "coefficient": -0.06771064724204372,
+      "contribution": -9529.144590649388,
+      "absolute_contribution": 9529.144590649388,
+      "direction": "NEGATIVE"
+    }
+  ],
+  "positive_drivers": [
+    {
+      "feature": "usdinr_high",
+      "display_name": "USD/INR Day High Exchange Rate",
+      "raw_value": null,
+      "transformed_value": 89.51250076293945,
+      "coefficient": 1222.2741772522068,
+      "contribution": 109408.81822380934,
+      "absolute_contribution": 109408.81822380934,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "usdinr_close",
+      "display_name": "USD/INR Closing Exchange Rate",
+      "raw_value": 98.3080510029483,
+      "transformed_value": 98.3080510029483,
+      "coefficient": 970.8045968189517,
+      "contribution": 95437.90781797418,
+      "absolute_contribution": 95437.90781797418,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_usd_high",
+      "display_name": "International Gold Day High (USD/oz)",
+      "raw_value": null,
+      "transformed_value": 4215.7998046875,
+      "coefficient": 22.494176588930873,
+      "contribution": 94830.94527022091,
+      "absolute_contribution": 94830.94527022091,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "usdinr_open",
+      "display_name": "USD/INR Open Exchange Rate",
+      "raw_value": null,
+      "transformed_value": 89.15789794921875,
+      "coefficient": 882.9288780715091,
+      "contribution": 78720.08280751781,
+      "absolute_contribution": 78720.08280751781,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_usd_low",
+      "display_name": "International Gold Day Low (USD/oz)",
+      "raw_value": null,
+      "transformed_value": 4163.7001953125,
+      "coefficient": 7.910267701395624,
+      "contribution": 32935.98317327512,
+      "absolute_contribution": 32935.98317327512,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_inr_proxy",
+      "display_name": "Implied INR Gold Proxy (USD Gold \u00d7 USD/INR)",
+      "raw_value": 421062.66676310974,
+      "transformed_value": 421062.66676310974,
+      "coefficient": 0.06619205453754873,
+      "contribution": 27871.003002109464,
+      "absolute_contribution": 27871.003002109464,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_lag_3",
+      "display_name": "3-Day Lagged Gold Price (t-3)",
+      "raw_value": 141981.0680849838,
+      "transformed_value": 141981.0680849838,
+      "coefficient": 0.1291374776585046,
+      "contribution": 18335.07700775522,
+      "absolute_contribution": 18335.07700775522,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_lag_7",
+      "display_name": "7-Day Lagged Gold Price (t-7)",
+      "raw_value": 141591.2065677997,
+      "transformed_value": 141591.2065677997,
+      "coefficient": 0.09617242549550632,
+      "contribution": 13617.169764460563,
+      "absolute_contribution": 13617.169764460563,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_lag_1",
+      "display_name": "1-Day Lagged Gold Price (t-1)",
+      "raw_value": 142182.61842151452,
+      "transformed_value": 142182.61842151452,
+      "coefficient": 0.05613508919519972,
+      "contribution": 7981.433967098764,
+      "absolute_contribution": 7981.433967098764,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_usd_open",
+      "display_name": "International Gold Open (USD/oz)",
+      "raw_value": null,
+      "transformed_value": 4197.7001953125,
+      "coefficient": 1.4454827407508044,
+      "contribution": 6067.7031831705,
+      "absolute_contribution": 6067.7031831705,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "quarter",
+      "display_name": "Quarter of Year Index",
+      "raw_value": 4.0,
+      "transformed_value": 4.0,
+      "coefficient": 523.4043809434601,
+      "contribution": 2093.6175237738403,
+      "absolute_contribution": 2093.6175237738403,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_lag_2",
+      "display_name": "2-Day Lagged Gold Price (t-2)",
+      "raw_value": 142096.54609505303,
+      "transformed_value": 142096.54609505303,
+      "coefficient": 0.011859005430830932,
+      "contribution": 1685.1237118435517,
+      "absolute_contribution": 1685.1237118435517,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_ma_14",
+      "display_name": "14-Day Moving Average Gold Price",
+      "raw_value": 141396.50233528105,
+      "transformed_value": 141396.50233528105,
+      "coefficient": 0.010428887318577551,
+      "contribution": 1474.6081900956337,
+      "absolute_contribution": 1474.6081900956337,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_volatility_30",
+      "display_name": "30-Day Gold Price Volatility",
+      "raw_value": 0.5162380074381862,
+      "transformed_value": 0.5162380074381862,
+      "coefficient": 2553.84308692185,
+      "contribution": 1318.3908665023223,
+      "absolute_contribution": 1318.3908665023223,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_ma_30",
+      "display_name": "30-Day Moving Average Gold Price",
+      "raw_value": 142355.07776827842,
+      "transformed_value": 142355.07776827842,
+      "coefficient": 0.005001288019915256,
+      "contribution": 711.9587450165955,
+      "absolute_contribution": 711.9587450165955,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_volatility_7",
+      "display_name": "7-Day Gold Price Volatility",
+      "raw_value": 0.09978691171295495,
+      "transformed_value": 0.09978691171295495,
+      "coefficient": 365.3160478488587,
+      "contribution": 36.45376021401969,
+      "absolute_contribution": 36.45376021401969,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_return_7d",
+      "display_name": "7-Day Gold Price Return (%)",
+      "raw_value": 0.3633588918849906,
+      "transformed_value": 0.3633588918849906,
+      "coefficient": 99.94258790702428,
+      "contribution": 36.3150279940146,
+      "absolute_contribution": 36.3150279940146,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "usdinr_return_1d",
+      "display_name": "1-Day USD/INR Return (%)",
+      "raw_value": 0.04078261566399233,
+      "transformed_value": 0.04078261566399233,
+      "coefficient": 603.3465098452099,
+      "contribution": 24.606048823228356,
+      "absolute_contribution": 24.606048823228356,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_usd_volume",
+      "display_name": "International Gold Trading Volume",
+      "raw_value": null,
+      "transformed_value": 618.0,
+      "coefficient": 0.010653878759869038,
+      "contribution": 6.584097073599065,
+      "absolute_contribution": 6.584097073599065,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_return_1d",
+      "display_name": "1-Day Gold Price Return (%)",
+      "raw_value": 0.08132515391170436,
+      "transformed_value": 0.08132515391170436,
+      "coefficient": 74.70195829307619,
+      "contribution": 6.0751482556901415,
+      "absolute_contribution": 6.0751482556901415,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "usdinr_volatility_14",
+      "display_name": "14-Day USD/INR Exchange Volatility",
+      "raw_value": 0.0018372320736968018,
+      "transformed_value": 0.0018372320736968018,
+      "coefficient": 1545.5516755175893,
+      "contribution": 2.8395371098167472,
+      "absolute_contribution": 2.8395371098167472,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_usd_return_1d",
+      "display_name": "1-Day USD Gold Return (%)",
+      "raw_value": -0.036597400554405635,
+      "transformed_value": -0.036597400554405635,
+      "coefficient": -76.08646936366706,
+      "contribution": 2.7845669960726362,
+      "absolute_contribution": 2.7845669960726362,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_usd_volatility_14",
+      "display_name": "14-Day USD Gold Volatility",
+      "raw_value": 0.0005377331812543352,
+      "transformed_value": 0.0005377331812543352,
+      "coefficient": 956.9780636912169,
+      "contribution": 0.5145988585792919,
+      "absolute_contribution": 0.5145988585792919,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "usdinr_volatility_7",
+      "display_name": "7-Day USD/INR Exchange Volatility",
+      "raw_value": 0.0007500963723626295,
+      "transformed_value": 0.0007500963723626295,
+      "coefficient": 662.3454749550588,
+      "contribution": 0.49682293801459243,
+      "absolute_contribution": 0.49682293801459243,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "gold_usd_volatility_7",
+      "display_name": "7-Day USD Gold Volatility",
+      "raw_value": 0.00025706825109584404,
+      "transformed_value": 0.00025706825109584404,
+      "coefficient": 221.53922856536414,
+      "contribution": 0.056950702036420615,
+      "absolute_contribution": 0.056950702036420615,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "is_month_start",
+      "display_name": "Month-Start Indicator",
+      "raw_value": 0.0,
+      "transformed_value": 0.0,
+      "coefficient": 1125.6865220101936,
+      "contribution": 0.0,
+      "absolute_contribution": 0.0,
+      "direction": "POSITIVE"
+    },
+    {
+      "feature": "is_month_end",
+      "display_name": "Month-End Indicator",
+      "raw_value": 0.0,
+      "transformed_value": 0.0,
+      "coefficient": -319.9097032036018,
+      "contribution": -0.0,
+      "absolute_contribution": 0.0,
+      "direction": "POSITIVE"
+    }
+  ],
+  "negative_drivers": [
+    {
+      "feature": "usdinr_low",
+      "display_name": "USD/INR Day Low Exchange Rate",
+      "raw_value": null,
+      "transformed_value": 88.99114990234375,
+      "coefficient": -1063.0290214829174,
+      "contribution": -94600.1750013281,
+      "absolute_contribution": 94600.1750013281,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_usd_close",
+      "display_name": "International Gold Close (USD/oz)",
+      "raw_value": 4283.094600563472,
+      "transformed_value": 4283.094600563472,
+      "coefficient": -13.791387786958966,
+      "contribution": -59069.818564600966,
+      "absolute_contribution": 59069.818564600966,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_ma_3",
+      "display_name": "3-Day Moving Average Gold Price",
+      "raw_value": 141994.42795215163,
+      "transformed_value": 141994.42795215163,
+      "coefficient": -0.12545970915636476,
+      "contribution": -17814.579632701334,
+      "absolute_contribution": 17814.579632701334,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_ma_7",
+      "display_name": "7-Day Moving Average Gold Price",
+      "raw_value": 141767.76326508698,
+      "transformed_value": 141767.76326508698,
+      "coefficient": -0.11079370498516546,
+      "contribution": -15706.975739598824,
+      "absolute_contribution": 15706.975739598824,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_lag_14",
+      "display_name": "14-Day Lagged Gold Price (t-14)",
+      "raw_value": 140733.32598026676,
+      "transformed_value": 140733.32598026676,
+      "coefficient": -0.06771064724204372,
+      "contribution": -9529.144590649388,
+      "absolute_contribution": 9529.144590649388,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_lag_5",
+      "display_name": "5-Day Lagged Gold Price (t-5)",
+      "raw_value": 141688.46254150657,
+      "transformed_value": 141688.46254150657,
+      "coefficient": -0.06406116241564938,
+      "contribution": -9076.727611295106,
+      "absolute_contribution": 9076.727611295106,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "week_of_year",
+      "display_name": "Week of Year Index",
+      "raw_value": 45.5,
+      "transformed_value": 45.5,
+      "coefficient": -48.254168944412235,
+      "contribution": -2195.5646869707566,
+      "absolute_contribution": 2195.5646869707566,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "day_of_year",
+      "display_name": "Day of Year Index",
+      "raw_value": 311.5,
+      "transformed_value": 311.5,
+      "coefficient": -4.777801800639722,
+      "contribution": -1488.2852608992735,
+      "absolute_contribution": 1488.2852608992735,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "month",
+      "display_name": "Month of Year Index",
+      "raw_value": 11.0,
+      "transformed_value": 11.0,
+      "coefficient": -31.785014897717122,
+      "contribution": -349.63516387488835,
+      "absolute_contribution": 349.63516387488835,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_volatility_14",
+      "display_name": "14-Day Gold Price Volatility",
+      "raw_value": 0.3330325727891881,
+      "transformed_value": 0.3330325727891881,
+      "coefficient": -847.6467665650778,
+      "contribution": -282.2939834856042,
+      "absolute_contribution": 282.2939834856042,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "usdinr_return_3d",
+      "display_name": "3-Day USD/INR Return (%)",
+      "raw_value": 0.12330589306479567,
+      "transformed_value": 0.12330589306479567,
+      "coefficient": -1425.1505539951213,
+      "contribution": -175.72946181215673,
+      "absolute_contribution": 175.72946181215673,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "usdinr_return_7d",
+      "display_name": "7-Day USD/INR Return (%)",
+      "raw_value": 0.2927638458319226,
+      "transformed_value": 0.2927638458319226,
+      "coefficient": -404.53584674730774,
+      "contribution": -118.43347027061508,
+      "absolute_contribution": 118.43347027061508,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "day_of_week",
+      "display_name": "Day of Week Index",
+      "raw_value": 2.0,
+      "transformed_value": 2.0,
+      "coefficient": -53.98363843827708,
+      "contribution": -107.96727687655417,
+      "absolute_contribution": 107.96727687655417,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "day_of_month",
+      "display_name": "Day of Month Index",
+      "raw_value": 7.5,
+      "transformed_value": 7.5,
+      "coefficient": -3.029143252187694,
+      "contribution": -22.718574391407707,
+      "absolute_contribution": 22.718574391407707,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "days_to_diwali",
+      "display_name": "Days Remaining to Diwali",
+      "raw_value": 0.5,
+      "transformed_value": 0.5,
+      "coefficient": -28.340865652319348,
+      "contribution": -14.170432826159674,
+      "absolute_contribution": 14.170432826159674,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_usd_return_7d",
+      "display_name": "7-Day USD Gold Return (%)",
+      "raw_value": -0.253451158002177,
+      "transformed_value": -0.253451158002177,
+      "coefficient": 28.011028686595136,
+      "contribution": -7.099427657449736,
+      "absolute_contribution": 7.099427657449736,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_return_3d",
+      "display_name": "3-Day Gold Price Return (%)",
+      "raw_value": 0.28808266561035634,
+      "transformed_value": 0.28808266561035634,
+      "coefficient": -19.46587372180981,
+      "contribution": -5.607780790213559,
+      "absolute_contribution": 5.607780790213559,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "gold_usd_return_3d",
+      "display_name": "3-Day USD Gold Return (%)",
+      "raw_value": -0.10941146453908868,
+      "transformed_value": -0.10941146453908868,
+      "coefficient": 30.699944791269587,
+      "contribution": -3.3589259208819726,
+      "absolute_contribution": 3.3589259208819726,
+      "direction": "NEGATIVE"
+    },
+    {
+      "feature": "is_near_diwali",
+      "display_name": "Diwali Season Window Indicator",
+      "raw_value": 1.0,
+      "transformed_value": 1.0,
+      "coefficient": -5.087485988042317e-12,
+      "contribution": -5.087485988042317e-12,
+      "absolute_contribution": 5.087485988042317e-12,
+      "direction": "NEGATIVE"
+    }
+  ],
+  "contribution_reconstruction_status": "PASS",
+  "reconstruction_status": "PASS"
+}

@@ -1,0 +1,40 @@
+MODEL COMPARISON REPORT
+=======================
+
+1. MODELS TRAINED
+Linear Regression
+Random Forest
+Gradient Boosting
+XGBoost
+
+2. TRAINING DATASET INFORMATION
+Rows: 117
+Date range: 2025-09-02 to 2026-06-19
+Training used only X_train and y_train.
+
+3. VALIDATION DATASET INFORMATION
+Rows: 25
+Date range: 2026-06-22 to 2026-07-27
+
+4. VALIDATION METRICS
+            model         MAE         RMSE     MAPE         R2
+Linear Regression 2495.976313  2738.804606 1.745914  -1.322526
+          XGBoost 6524.198125  6832.937854 4.566040 -13.456178
+Gradient Boosting 9385.523050  9657.063364 6.564326 -27.875446
+    Random Forest 9847.321333 10091.011958 6.892183 -30.528840
+
+5. RANKING
+            model         RMSE         MAE     MAPE         R2
+Linear Regression  2738.804606 2495.976313 1.745914  -1.322526
+          XGBoost  6832.937854 6524.198125 4.566040 -13.456178
+Gradient Boosting  9657.063364 9385.523050 6.564326 -27.875446
+    Random Forest 10091.011958 9847.321333 6.892183 -30.528840
+Best validation model: Linear Regression
+
+6. FEATURE IMPORTANCE SUMMARY
+Feature importance files were generated for Random Forest, Gradient Boosting, and XGBoost.
+
+7. TEST DATA PROTECTION
+Test data was loaded only for size, target completeness, and chronological integrity checks.
+Test predictions and test metrics were not generated.
+The test set was not used for model selection or tuning.
