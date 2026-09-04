@@ -10,7 +10,7 @@ from typing import Any
 import pandas as pd
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 from pydantic import BaseModel
 
 from api.config import (
@@ -277,6 +277,12 @@ REQUIRED_READINESS_ARTIFACTS = [
     PROJECT_ROOT / "data" / "processed" / "model_data" / "preprocessor.joblib",
     PROJECT_ROOT / "models" / "final_diwali_forecast.json",
 ]
+
+
+@app.get("/", include_in_schema=False)
+def root():
+    """Redirect root endpoint to interactive API documentation."""
+    return RedirectResponse(url="/docs")
 
 
 @app.get("/health", response_model=HealthResponse, tags=["Health"], summary="Check API liveness health")
