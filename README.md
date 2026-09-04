@@ -68,6 +68,8 @@ Predicting domestic gold prices in India presents several unique technical chall
 
 ## System Architecture
 
+![System Architecture](reports/system_architecture.png)
+
 The platform uses a decoupled client-server architecture:
 
 ```
